@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'e_commerce_app'
+    
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,4 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 # MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')
+AUTH_USER_MODEL = "e_commerce_app.UserDetails"

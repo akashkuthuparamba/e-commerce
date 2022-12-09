@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from . models import item
+from . models import item,UserDetails
 from django.contrib.auth.models import User
 
 class ItemForm(ModelForm):
@@ -15,5 +15,10 @@ class LoginForm(ModelForm):
 
 class RegisterForm(ModelForm):
     class Meta:
-        model=User
-        fields=("username","password","email")        
+        model=UserDetails
+        fields=("username","password","first_name","last_name","address","email","phone_no")        
+
+class DetailEditForm(ModelForm):
+    class Meta:
+        model=UserDetails
+        fields=("first_name","last_name","address","email","phone_no")              
