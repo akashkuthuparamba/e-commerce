@@ -11,7 +11,7 @@ class item(models.Model):
     quantitie=models.CharField(max_length=30, default=None)
     brand_name=models.CharField(max_length=100, default=None)
     category=models.CharField(max_length=100, default=None)
-
+    
 
 class UserDetails(AbstractUser):
     address=models.TextField(default=None)

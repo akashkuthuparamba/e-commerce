@@ -1,5 +1,5 @@
 from django.urls import path
-from.views import home_view,list,checkout,login_view,register_view,choice,logout_view,buy_view,edit_view,wish_view
+from.views import home_view,list,details,login_view,register_view,choice,logout_view,buy_view,edit_view,wish_view
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -7,8 +7,8 @@ app_name="e_commerce_app"
 
 urlpatterns=[
     path('home/',home_view,name="home"),
-    path('',list,name="list"),
-    path('<int:id>/',checkout,name='checkout'),
+    path('',list,name='list'),
+    path('<int:id>/',details,name='details'),
     path('login/',login_view,name='login'),
     path('register/',register_view,name='register'),
     path('choice/',choice,name='choice'),

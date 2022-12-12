@@ -7,10 +7,10 @@ class ItemForm(ModelForm):
         model=item
         fields='__all__'
 
-class LoginForm(ModelForm):
-    class Meta:
-        model=User
-        fields=("username","password")
+# class LoginForm(ModelForm):
+#     class Meta:
+#         model=User
+#         fields=("username","password")
 
 
 class RegisterForm(ModelForm):

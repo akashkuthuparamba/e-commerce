@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'e_commerce_app'
+    'e_commerce_app',
+    'crispy_forms',
     
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -132,3 +134,12 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 # MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')
 AUTH_USER_MODEL = "e_commerce_app.UserDetails"
+
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.request",
+)
